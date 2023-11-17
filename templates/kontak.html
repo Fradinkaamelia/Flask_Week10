@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background: url("{{ url_for('static', filename='images/background.jpg') }}");
+            background-size: cover;
+            color: #333;
+            text-align: center;
+            align-items: center;
+            align-content: center;
+        }
+        .button-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            text-align: center;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            background-color: rgb(167, 106, 0);
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+            transition: background-color 0.3s;
+        }
+        #welcome {
+            text-align: center;
+        }
+        kontak {
+            text-align: center;
+            align-items: center;
+            align-content: center;
+            margin: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Menambahkan latar belakang semi-transparan */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+        }
+
+        .kontak h2 {
+            color: #333;
+        }
+
+        .kontak img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            background: #333;
+        }
+
+        .kontak p {
+            margin: 5px 0;
+        }
+
+        /* Efek hover untuk link */
+        .kontak a {
+            color: #000000;
+            transition: color 0.3s;
+        }
+
+        .kontak a:hover {
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <a href="/" class="button">Halaman Utama</a>
+        <a href="/cv" class="button">CV</a>
+        <a href="/biodata" class="button">Biodata</a>
+        <a href="/quote" class="button">Codding Quote</a>
+        <a href="/fibonacci" class="button">Deret Fibonacci</a>
+        <a href="/convertjson" class="button">Convert CSV ke JSON</a>
+        <a href="/post" class="button">Post Data</a>
+    </div>
+
+    <div id="welcome">
+        <br>
+        <h1>Selamat Datang</h1>
+        <h2>Hubungi Fradinka Amelia Edyputri</h2>
+        <h2>untuk Kolaborasi</h2>
+    </div>
+
+    <div class="kontak">
+        <h2>Email</h2>
+        <img src="{{ url_for('static', filename='images/logoemail.png') }}" alt="Email" style="width:200px;height:200px;">
+        <p><a href="fradinkaedyputri@gmail.com">Email</a></p>
+        <p>fradinkaamelia@gmail.com</p>
+    </div>
+
+    <div class="kontak">
+        <h2>WhatsApp</h2>
+        <img src="{{ url_for('static', filename='images/logowa.png') }}" alt="WhatsApp" style="width:200px;height:200px;">
+        <p><a href="https://wa.me/6282264451665">WhatsApp</a></p>
+        <p>+6282264451665</p>
+    </div>
+
+    <div class="kontak">
+    <h2>Instagram</h2>
+    <img src="{{ url_for('static', filename='images/logoig.png') }}" alt="Instagram" style="width:200px;height:200px;">
+    <p><a href="https://instagram.com/fradinkaameliae">instagram</a></p>
+    <p>@fradinkaamelia</p>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background: url("{{ url_for('static', filename='images/background.jpg') }}");
+            background-size: cover;
+            color: #333;
+        }
+        .button-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            text-align: center;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            background-color: rgb(167, 106, 0);
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+            transition: background-color 0.3s;
+        }
+        #welcome {
+            text-align: center;
+        }
+        #img {
+            text-align: center; /* Menengahkan secara horizontal */
+            margin-top: 20px;
+        }
+
+        img {
+            border-radius: 10px;
+            width: 250px;
+        }
+        p {
+            margin: 5px 0;
+        }
+        legend{ 
+            background-color: rgb(116, 62, 0); 
+            color: white; 
+            padding: 5px 10px; 
+            border-radius: 5px;}
+        mark{
+            background-color: rgb(116, 62, 0) ;
+            color : white
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <a href="/" class="button">Halaman Utama</a>
+        <a href="/cv" class="button">CV</a>
+        <a href="/kontak" class="button">Contact</a>
+        <a href="/quote" class="button">Codding Quote</a>
+        <a href="/fibonacci" class="button">Deret Fibonacci</a>
+        <a href="/convertjson" class="button">Convert CSV ke JSON</a>
+        <a href="/post" class="button">Post Data</a>
+    </div>
+    <div id="welcome">
+        <br>
+        <h1>Selamat Datang</h1>
+        <h2>Halaman Biodata</h2>
+    </div>
+    <div id="img">
+        <br>
+        <img src="{{ url_for('static', filename='images/fotofradinka.jpg') }}" alt="Foto Fradinka" width="250px" >
+    </div>
+    <fieldset>
+        <legend><mark>IDENTITAS</mark></legend>
+        <p>Nama Lengkap : Fradinka Amelia Edyputri</p>
+        <p>Jenis kelamin : Wanita</p>
+        <p>Tempat, Tanggal Lahir : Gresik, 30 Agustus 2005</p>
+        <p>Agama : Islam</p>
+        <p>Hobi : Bulu tangkis</p>
+        <p>Alamat : Wisma Permai Tengah X</p>
+    </fieldset>
+    <fieldset>
+        <legend><mark>PENDIDIKAN</mark></legend>
+        <P>Universitas : <a href="https://unair.ac.id/">Universitas Airlangga</a></P>
+        <p>Program Studi : <a href="https://ftmm.unair.ac.id/teknologi-sains-data-program-studi/">Teknologi Sains Data</a></P>
+        <p>Angkatan Tahun : 2022</p>
+    </fieldset>
+    <fieldset>
+        <legend><mark>BIDANG TERTARIK</mark></legend>
+        <ul>
+            <li>Analisis Data</li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </fieldset>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Pribadi</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background: url("{{ url_for('static', filename='images/home_bg.jpg') }}") ;
+            background-size: 300;
+        }
+        h1, h2 {
+            color: #333;
+            text-align: center;
+        }
+
+        .button-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            background-color: rgb(167, 106, 0);
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: rgb(131, 90, 0);
+        }
+    </style>
+</head>
+<body>
+    <h1>Selamat datang di Blog Pribadi</h1>
+    <h1>Fradinka Amelia Edyputri</h1>
+    <h2>Klik untuk Menuju Halaman Terkait</h2>
+
+    <div class="button-container">
+        <a href="/cv" class="button">CV</a>
+        <a href="/biodata" class="button">Biodata</a>
+        <a href="/kontak" class="button">Contact</a>
+        <a href="/quote" class="button">Codding Quote</a>
+        <a href="/fibonacci" class="button">Deret Fibonacci</a>
+        <a href="/convertjson" class="button">Convert CSV ke JSON</a>
+        <a href="/post" class="button">Post Data</a>
+    </div>
+</body>
+</html>
